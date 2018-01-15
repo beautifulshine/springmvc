@@ -1,0 +1,7 @@
+springmvc整合
+1、springmvc充当前端控制器 ，需要在web.xml中进行配置org.springframework.web.servlet.DispatcherServlet
+2.默认的xml配置文件位置是在默认是/WEB-INF/目录下，所以需要指定 <init-param>和<context-param>下的value值
+3. 值得注意的是<context:component-scan/>不但启用了对类包进行扫描以实施注释驱动 Bean 定义的功能，
+	同时还启用了注释驱动自动注入的功能（即还隐式地在内部注册了 AutowiredAnnotationBeanPostProcessor 和  
+	CommonAnnotationBeanPostProcessor），因此当使用 <context:component-scan/> 后，
+	就可以将 <context:annotation-config/> 移除了。
